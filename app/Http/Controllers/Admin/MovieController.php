@@ -11,7 +11,7 @@ use GuzzleHttp\Exception\RequestException;
 class MovieController extends Controller
 {
     public function index(){
-        $movies = Movies::paginate(10);
+        $movies = Movies::paginate(7);
         return view('admin.movies',compact('movies'));    
         // $client = new Client();
         // $url = 'https://api.example.com/data'; // URL của API bạn cần gọi
@@ -32,7 +32,50 @@ class MovieController extends Controller
     }
 
     public function detail_movie($slug){
-        return view('admin.movie');
+        $client = new Client();
+        $url = 'https://ophim1.com/phim/'; // URL của API bạn cần gọi
+
+        try {
+            $response = $client->request('GET', $url . $slug);
+            $statusCode = $response->getStatusCode();
+            $body = $response->getBody();
+            $data = json_decode($body, true); // Chuyển đổi dữ liệu JSON sang mảng PHP
+            
+            $movie['name'] = $data['movie']['name'] ;
+            $movie['status'] = $data['movie']['status'] ;
+            $movie['origin_name'] = $data['movie']['origin_name'] ;
+            $movie['content'] = $data['movie']['content'] ;
+            $movie['type_release'] = $data['movie']['type'] ;
+            $movie['time'] = $data['movie']['time'] ;
+            $movie['episode_current'] = $data['movie']['episode_current'] ;
+            $movie['episode_total'] = $data['movie']['episode_total'] ;
+            $movie['quality'] = $data['movie']['quality'] ;
+            $movie['lang'] = $data['movie']['lang'] ;
+            $movie['theater_screen'] = $data['movie']['chieurap'] ;
+            $movie['year'] = $data['movie']['year'] ;
+            $movie['category'] = $data['movie']['category'] ;
+            $movie['thumb_url'] = $data['movie']['thumb_url'] ;
+            $movie['poster_url'] = $data['movie']['poster_url'] ;
+            $movie['country'] = $data['movie']['country'] ;
+            $movie['director'] = $data['movie']['director'] ;
+            $movie['actor'] = $data['movie']['actor'] ;
+            $movie['category'] = $data['movie']['category'] ;
+            $movie['episodes'] = $data['episodes'][0]['server_data'] ;
+
+            return view('admin.movie',compact('movie','slug'));
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Something went wrong!',
+                'message' => $e->getMessage()
+            ], 500);
+        }
+        
+    }
+
+    public function delete_movie(Request $req){
+        $movie = new Movies();
+        $movie::where('slug',$req['slug'])->delete();
+        return redirect()->back() ;    
     }
 
     public function add_new_film(Request $req){
@@ -43,8 +86,7 @@ class MovieController extends Controller
             $response = $client->request('GET', $url . $req['slug']);
             $statusCode = $response->getStatusCode();
             $body = $response->getBody();
-            $data = json_decode($body, true); // Chuyển đổi dữ liệu JSON sang mảng PHP
-            
+            $data = json_decode($body, true); 
             $movie = new Movies();
 
             $movie->type = $data['movie']['tmdb']['type'] ;
@@ -61,6 +103,7 @@ class MovieController extends Controller
             $movie->episode_current = $data['movie']['episode_current'] ;
             $movie->episode_total = $data['movie']['episode_total'] ;
             $movie->quality = $data['movie']['quality'] ;
+            $movie['theater_screen'] = $data['movie']['chieurap'] ;
             $movie->lang = $data['movie']['lang'] ;
             $movie->year = $data['movie']['year'] ;
             $movie->actor = $data['movie']['actor'] ;
@@ -70,8 +113,14 @@ class MovieController extends Controller
             $movie->country = $data['movie']['country'] ;
             $movie->episodes = $data['episodes'][0]['server_data'] ;
             $movie->vietsub = $data['episodes'][0]['server_name'] ;
+
+            $movies = new Movies();
+            if($movies::where('name',$movie->name)->get()->count()){
+                return response()->json(['error' => 'Thêm cái khác deii!']);
+            };
+
             $movie->save();
-            return redirect()->route('admin.movies');
+            return response()->json(['success' =>'Oke r đấy!']);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => 'Something went wrong!',

@@ -22,6 +22,7 @@ class Movies extends Model
         'thumb_url',
         'poster_url',
         'trailer_url',
+        'theater_screen',
         'time',
         'episode_current',
         'episode_total',

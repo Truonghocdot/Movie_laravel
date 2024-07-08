@@ -616,6 +616,15 @@
             z-index: 9
         }
 
+        * html .float-ck
+
+        /* IE6 position fixed Bottom */
+            {
+            position: absolute;
+            bottom: auto;
+            top: expression(eval (document.documentElement.scrollTop+document.docum entElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+        }
+
         #hide_float_left a {
             background: #0098D2;
             padding: 5px 15px 5px 15px;

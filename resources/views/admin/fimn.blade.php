@@ -1,5 +1,13 @@
 @extends('layouts.admin')
 @section('main')
+    @error('against')
+        <script>
+            function showAlert() {
+                alert("Thêm cái khác đeiiiii");
+            }
+            showAlert();
+        </script>
+    @enderror
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <h5 class="card-header">Light Table head</h5>
@@ -29,13 +37,14 @@
                                     <td>{{ $item['year'] }}</td>
                                     <td>{{ $item['slug'] }}</td>
                                     <td>
-                                        <form action="{{ route('admin.movie.add') }}" method="POST">
+                                        <form action="{{ route('admin.movie.add') }}" method="POST" class="add-film-form">
                                             @csrf
                                             <input type="hidden" value="{{ $item['slug'] }}" name="slug">
                                             @method('patch')
-                                            <button href="" class="btn btn-primary">Add</button>
+                                            <button type="submit" class="btn btn-primary">Add</button>
                                         </form>
-                                        <a href="" class="btn btn-primary">Detail</a>
+                                        <a href="{{ route('admin.movie', ['slug' => $item['slug']]) }}"
+                                            class="btn btn-primary">Detail</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -65,4 +74,34 @@
             </nav>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('.add-film-form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    fetch(this.action, {
+                            method: 'POST',
+                            headers: {
+                                'X-CSRF-TOKEN': document.querySelector(
+                                    'meta[name="csrf-token"]').getAttribute('content')
+                            },
+                            body: formData
+                        }).then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Film added successfully!');
+                            } else {
+                                alert('Thêm cái khác deii');
+                            }
+                        }).catch(error => {
+                            console.error('Error:', error);
+                            alert('An error occurred. Please try again.');
+                        });
+                });
+            });
+        });
+    </script>
 @endsection

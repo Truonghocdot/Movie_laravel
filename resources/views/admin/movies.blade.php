@@ -39,7 +39,20 @@
                                             {{ $country['name'] }}
                                         @endforeach
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <form action="{{ route('admin.movie.delete') }}" method="POST">
+                                            @method('DELETE')
+                                            @csrf
+                                            <input type="hidden" name="slug" value="{{ $item->slug }}">
+                                            <button type="submit"
+                                                onclick="confirm('Are you sure about delete this movie?')"
+                                                class="btn btn-danger">
+                                                Delete
+                                            </button>
+                                        </form>
+                                        <a href="{{ route('admin.movie', ['slug' => $item['slug']]) }}"
+                                            class="btn btn-primary">Detail</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         @else
@@ -47,8 +60,9 @@
                         @endif
                     </tbody>
                 </table>
-                {{ $movies->links() }}
+
             </div>
+            <div class="w-25">{{ $movies->links() }}</div>
         </div>
     </div>
 @endsection

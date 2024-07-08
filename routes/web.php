@@ -10,16 +10,19 @@ Route::get('/', function () {
 
 
 Route::get('/detail', function () {
-    return view('detail');
+    return view('client.detail');
 });
 
 Route::get("/watching",function(){
     return view('client.watching');
 });
 
+Route::get('/layout',function(){
+    return view('layouts.client');
+})->name('client.layout');
 
 Route::get("/category",function(){
-    return view('categories');
+    return view('client.categories');
 });
 
 Route::prefix('admin')->group(function(){
@@ -31,8 +34,9 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout', [LogonController::class, 'logout'])->name("admin.logout");
 
     Route::get("", [DashboardController::class, 'index'])->name('dashboard');
+    Route::delete('/movie/delete',[MovieController::class,'delete_movie'])->name('admin.movie.delete');
     Route::get("/movies", [MovieController::class, 'index'])->name('admin.movies');
-    Route::get("/movie/{slug}", [MovieController::class, 'detail_movie'])->name("admin.movie");
     Route::get('/moives/new', [MovieController::class, 'movies_list_new'])->name('admin.movies.new');
     Route::patch('/movies/add-new/',[MovieController::class,'add_new_film'])->name('admin.movie.add');
+    Route::get("/movie/{slug}", [MovieController::class, 'detail_movie'])->name("admin.movie");
 });
