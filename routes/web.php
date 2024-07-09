@@ -4,26 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MovieController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LogonController;
-Route::get('/', function () {
-    return view('client.index');
-});
+use App\Http\Controllers\Client\CategoryController;
+use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\MovieController as Movie;
 
+Route::get('/', [HomeController::class,'home'])->name('home');
 
-Route::get('/detail', function () {
-    return view('client.detail');
-});
+Route::get('/chi-tiet/{slug}', [Movie::class,'detail'])->name('detail');
 
-Route::get("/watching",function(){
-    return view('client.watching');
-});
+Route::get("/xem-phim/{slug}",[Movie::class,'watching'])->name('watching');
 
 Route::get('/layout',function(){
     return view('layouts.client');
 })->name('client.layout');
 
-Route::get("/category",function(){
-    return view('client.categories');
-});
+Route::get("/the-loai",[]);
 
 Route::prefix('admin')->group(function(){
     

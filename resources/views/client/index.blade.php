@@ -14,17 +14,17 @@
         type="image/x-icon" />
     <meta name="revisit-after" content="1 days" />
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Phim hay 2021 - Xem phim hay nhất</title>
+    <title>Phim hay 2024 - Xem phim hay nhất</title>
     <meta name="description"
-        content="Phim hay 2021 - Xem phim hay nhất, xem phim online miễn phí, phim hot , phim nhanh" />
+        content="Phim hay 2024 - Xem phim hay nhất, xem phim online miễn phí, phim hot , phim nhanh" />
     <link rel="canonical" href="">
     <link rel="next" href="" />
     <meta property="og:locale" content="vi_VN" />
-    <meta property="og:title" content="Phim hay 2020 - Xem phim hay nhất" />
+    <meta property="og:title" content="Phim hay 2024 - Xem phim hay nhất" />
     <meta property="og:description"
-        content="Phim hay 2020 - Xem phim hay nhất, phim hay trung quốc, hàn quốc, việt nam, mỹ, hong kong , chiếu rạp" />
+        content="Phim hay 2024 - Xem phim hay nhất, phim hay trung quốc, hàn quốc, việt nam, mỹ, hong kong , chiếu rạp" />
     <meta property="og:url" content="" />
-    <meta property="og:site_name" content="Phim hay 2021- Xem phim hay nhất" />
+    <meta property="og:site_name" content="Phim hay 2024- Xem phim hay nhất" />
     <meta property="og:image" content="" />
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="55" />
@@ -32,10 +32,13 @@
 
     <link rel='dns-prefetch' href='//s.w.org' />
 
-    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap.min.css?ver=5.7.2' media='all' />
-    <link rel='stylesheet' id='style-css' href='css/style.css?ver=5.7.2' media='all' />
-    <link rel='stylesheet' id='wp-block-library-css' href='css/style.min.css?ver=5.7.2' media='all' />
-    <script type='text/javascript' src='js/jquery.min.js?ver=5.7.2' id='halim-jquery-js'></script>
+    <link rel='stylesheet' id='bootstrap-css' href='{{ url('') }}/css/bootstrap.min.css?ver=5.7.2'
+        media='all' />
+    <link rel='stylesheet' id='style-css' href='{{ url('') }}/css/style.css?ver=5.7.2' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='{{ url('') }}/css/style.min.css?ver=5.7.2'
+        media='all' />
+    <script type='text/javascript' src='{{ url('') }}/js-client/jquery.min.js?ver=5.7.2' id='halim-jquery-js'>
+    </script>
     <style type="text/css" id="wp-custom-css">
         .textwidget p a img {
             width: 100%;
@@ -74,13 +77,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hidden-xs">
-                    <div id="get-bookmark" class="box-shadow"><i class="hl-bookmark"></i><span> Bookmarks</span><span
-                            class="count">0</span></div>
-                    <div id="bookmark-list" class="hidden bookmark-list-on-pc">
-                        <ul style="margin: 0;"></ul>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
@@ -99,10 +95,6 @@
                         data-toggle="collapse" data-target="#search-form" aria-expanded="false">
                         <span class="hl-search" aria-hidden="true"></span>
                     </button>
-                    <button type="button" class="navbar-toggle collapsed pull-right get-bookmark-on-mobile">
-                        Bookmarks<i class="hl-bookmark" aria-hidden="true"></i>
-                        <span class="count">0</span>
-                    </button>
                     <button type="button" class="navbar-toggle collapsed pull-right get-locphim-on-mobile">
                         <a href="javascript:;" id="expand-ajax-filter" style="color: #ffed4d;">Lọc <i
                                 class="fas fa-filter"></i></a>
@@ -118,17 +110,15 @@
                                 <a title="Năm" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Năm <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Phim 2020" href="danhmuc.php">Phim 2020</a></li>
-                                    <li><a title="Năm 2019" href="danhmuc.php">Năm 2019</a></li>
+                                    <li><a title="Phim 2020" href="danhmuc.php">Phim 2024</a></li>
+                                    <li><a title="Năm 2019" href="danhmuc.php">Năm 2023</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2022</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2021</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2020</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2019</a></li>
                                     <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2017</a></li>
+                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2016</a></li>
                                 </ul>
                             </li>
                             <li class="mega dropdown">
@@ -176,9 +166,6 @@
                             <li><a title="Phim Chiếu Rạp" href="danhmuc.php">Phim Chiếu Rạp</a></li>
                         </ul>
                     </div>
-                    <ul class="nav navbar-nav navbar-left" style="background:#000;">
-                        <li><a href="#" onclick="locphim()" style="color: #ffed4d;">Lọc Phim</a></li>
-                    </ul>
                 </div>
             </nav>
             <div class="collapse navbar-collapse" id="search-form">
@@ -214,24 +201,26 @@
                         </ul>
                     </div>
                     <div id="halim-advanced-widget-4-ajax-box" class="halim_box">
-                        <article class="col-md-2 col-sm-4 col-xs-6 thumb grid-item post-38424">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php" title="GÓA PHỤ ĐEN">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://lumiere-a.akamaihd.net/v1/images/p_blackwidow_disneyplus_21043-1_63f71aa0.jpeg"
-                                            alt="GÓA PHỤ ĐEN" title="GÓA PHỤ ĐEN"></figure>
-                                    <span class="status">HD</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">GÓA PHỤ ĐEN</p>
-                                            <p class="original_title">Black Widow</p>
+                        @foreach ($theater_screen as $item)
+                            <article class="col-md-2 col-sm-4 col-xs-6 thumb grid-item post-38424">
+                                <div class="halim-item">
+                                    <a class="halim-thumb" href="{{ route('detail', ['slug' => $item->slug]) }}"
+                                        title="GÓA PHỤ ĐEN">
+                                        <figure><img class="lazy img-responsive" src="{{ $item->thumb_url }}"
+                                                alt="GÓA PHỤ ĐEN" title="GÓA PHỤ ĐEN"></figure>
+                                        <span class="status">{{ $item->quality }}</span><span class="episode"><i
+                                                class="fa fa-play" aria-hidden="true"></i>{{ $item->vietsub }}</span>
+                                        <div class="icon_overlay"></div>
+                                        <div class="halim-post-title-box">
+                                            <div class="halim-post-title ">
+                                                <p class="entry-title">{{ $item->name }}</p>
+                                                <p class="original_title">{{ $item->origin_name }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
+                                    </a>
+                                </div>
+                            </article>
+                        @endforeach
                     </div>
                 </section>
                 <div class="clearfix"></div>
@@ -244,26 +233,29 @@
                         </a>
                     </div>
                     <div id="halim-advanced-widget-2-ajax-box" class="halim_box">
-                        <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://image.bongngocdn.com/upload/poster-loki-marvel-2021.jpg"
-                                            alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
-                                            title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
-                                    <span class="status">TẬP 15</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO</p>
-                                            <p class="original_title">My Roommate Is a Gumiho</p>
+                        @foreach ($series as $item)
+                            <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
+                                <div class="halim-item">
+                                    <a class="halim-thumb" href="{{ route('detail', ['slug' => $item->slug]) }}">
+                                        <figure><img class="lazy img-responsive" src="{{ $item->thumb_url }}"
+                                                alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
+                                                title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
+                                        <span class="status">{{ $item->episode_current }}</span><span
+                                            class="episode"><i class="fa fa-play"
+                                                aria-hidden="true"></i>{{ $item->vietsub }}</span>
+                                        <div class="icon_overlay"></div>
+                                        <div class="halim-post-title-box">
+                                            <div class="halim-post-title ">
+                                                <p class="entry-title">{{ $item->name }}</p>
+                                                <p class="original_title">{{ $item->origin_name }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
+                                    </a>
+                                </div>
+                            </article>
+                        @endforeach
                     </div>
+                    {{ $series->links() }}
                 </section>
                 <div class="clearfix"></div>
                 <section id="halim-advanced-widget-2">
@@ -273,54 +265,26 @@
                         </a>
                     </div>
                     <div id="halim-advanced-widget-2-ajax-box" class="halim_box">
-                        <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://upload.wikimedia.org/wikipedia/vi/e/e8/Avengers-Infinity_War-Official-Poster.jpg"
-                                            alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
-                                            title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
-                                    <span class="status">TẬP 15</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO</p>
-                                            <p class="original_title">My Roommate Is a Gumiho</p>
+                        @foreach ($single as $item)
+                            <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
+                                <div class="halim-item">
+                                    <a class="halim-thumb" href="{{ route('detail', ['slug' => $item->slug]) }}">
+                                        <figure><img class="lazy img-responsive" src="{{ $item->thumb_url }}"
+                                                alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
+                                                title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
+                                        <span class="status">{{ $item->quality }}</span><span class="episode"><i
+                                                class="fa fa-play" aria-hidden="true"></i>{{ $item->lang }}</span>
+                                        <div class="icon_overlay"></div>
+                                        <div class="halim-post-title-box">
+                                            <div class="halim-post-title ">
+                                                <p class="entry-title">{{ $item->name }}</p>
+                                                <p class="original_title">{{ $item->origin_name }}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <div class="clearfix"></div>
-                <section id="halim-advanced-widget-2">
-                    <div class="section-heading">
-                        <a href="danhmuc.php" title="Phim Lẻ">
-                            <span class="h-text">Phim Chiếu Rạp</span>
-                        </a>
-                    </div>
-                    <div id="halim-advanced-widget-2-ajax-box" class="halim_box">
-                        <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://fptninhbinh.vn/wp-content/uploads/2021/06/bo-gia.jpg"
-                                            alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
-                                            title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
-                                    <span class="status">TẬP 15</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO</p>
-                                            <p class="original_title">My Roommate Is a Gumiho</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
+                                    </a>
+                                </div>
+                            </article>
+                        @endforeach
                     </div>
                 </section>
                 <div class="clearfix"></div>
@@ -336,24 +300,27 @@
                         <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
                             <div class="halim-ajax-popular-post-loading hidden"></div>
                             <div id="halim-ajax-popular-post" class="popular-post">
-                                <div class="item post-37176">
-                                    <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
-                                        <div class="item-link">
-                                            <img src="https://ghienphim.org/uploads/GPax0JpZbqvIVyfkmDwhRCKATNtLloFQ.jpeg?v=1624801798"
-                                                class="lazy post-thumb" alt="CHỊ MƯỜI BA: BA NGÀY SINH TỬ"
-                                                title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ" />
-                                            <span class="is_trailer">Trailer</span>
+                                @foreach ($top as $item)
+                                    <div class="item post-37176">
+                                        <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
+                                            <div class="item-link">
+                                                <img src="{{ $item->thumb_url }}" class="lazy post-thumb"
+                                                    alt="CHỊ MƯỜI BA: BA NGÀY SINH TỬ"
+                                                    title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ" />
+                                                <span class="is_trailer">{{ $item->vietsub }}</span>
+                                            </div>
+                                            <p class="title">{{ $item->name }}</p>
+                                        </a>
+                                        <div class="viewsCount" style="color: #9d9d9d;">{{ $item->view }}K lượt xem
                                         </div>
-                                        <p class="title">CHỊ MƯỜI BA: BA NGÀY SINH TỬ</p>
-                                    </a>
-                                    <div class="viewsCount" style="color: #9d9d9d;">3.2K lượt xem</div>
-                                    <div style="float: left;">
-                                        <span class="user-rate-image post-large-rate stars-large-vang"
-                                            style="display: block;/* width: 100%; */">
-                                            <span style="width: 0%"></span>
-                                        </span>
+                                        <div style="float: left;">
+                                            <span class="user-rate-image post-large-rate stars-large-vang"
+                                                style="display: block;/* width: 100%; */">
+                                                <span style="width: 0%"></span>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </section>
@@ -384,9 +351,6 @@
     <script type='text/javascript' src='js/owl.carousel.min.js?ver=5.7.2' id='carousel-js'></script>
 
     <script type='text/javascript' src='js/halimtheme-core.min.js?ver=1626273138' id='halim-init-js'></script>
-
-
-
 
     <style>
         #overlay_mb {

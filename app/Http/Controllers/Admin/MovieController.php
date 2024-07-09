@@ -103,7 +103,7 @@ class MovieController extends Controller
             $movie->episode_current = $data['movie']['episode_current'] ;
             $movie->episode_total = $data['movie']['episode_total'] ;
             $movie->quality = $data['movie']['quality'] ;
-            $movie['theater_screen'] = $data['movie']['chieurap'] ;
+            $movie->theater_screen = $data['movie']['chieurap'] ;
             $movie->lang = $data['movie']['lang'] ;
             $movie->year = $data['movie']['year'] ;
             $movie->actor = $data['movie']['actor'] ;

@@ -14,6 +14,8 @@
     <link rel="shortcut icon"
         href="https://www.pngkey.com/png/detail/360-3601772_your-logo-here-your-company-logo-here-png.png"
         type="image/x-icon" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
     <meta name="revisit-after" content="1 days" />
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <title>Phim hay 2021 - Xem phim hay nhất</title>
@@ -33,11 +35,20 @@
 
     <link rel='dns-prefetch' href='//s.w.org' />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <link rel='stylesheet' id='bootstrap-css' href='css/bootstrap.min.css?ver=5.7.2' media='all' />
-    <link rel='stylesheet' id='style-css' href='css/style.css?ver=5.7.2' media='all' />
-    <link rel='stylesheet' id='wp-block-library-css' href='css/style.min.css?ver=5.7.2' media='all' />
-    <script type='text/javascript' src='js/jquery.min.js?ver=5.7.2' id='halim-jquery-js'></script>
+    <link rel='stylesheet' id='bootstrap-css' href='{{ url('') }}/css/bootstrap.min.css?ver=5.7.2'
+        media='all' />
+    <link rel='stylesheet' id='style-css' href='{{ url('') }}/css/style.css?ver=5.7.2' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='{{ url('') }}/css/style.min.css?ver=5.7.2'
+        media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='{{ url('') }}/css/owl.carousel.min.css?ver=5.7.2'
+        media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='{{ url('') }}/css/owl.theme.default.min.css?ver=5.7.2'
+        media='all' />
+    <script type='text/javascript' src='{{ url('') }}/js-client/owl.carousel.min?ver=5.7.2' id='halim-jquery-js'>
+    </script>
+    <script type='text/javascript' src='{{ url('') }}/js-client/jquery.min.js?ver=5.7.2' id='halim-jquery-js'>
+    </script>
+    <script src="{{ url('') }}/js-client/halimtheme-core.min.js"></script>
     <style type="text/css" id="wp-custom-css">
         .textwidget p a img {
             width: 100%;
@@ -52,7 +63,8 @@
     </style>
 </head>
 
-<body class="archive tax-release term-32429 halimthemes halimmovies" data-masonry="">
+<body class="post-template-default single single-post postid-38424 single-format-standard halimthemes halimmovies"
+    data-masonry="">
     <header id="header">
         <div class="container">
             <div class="row" id="headwrap">
@@ -183,63 +195,13 @@
             </div>
         </div>
     </div>
-    </div>
+
     <div class="container">
         <div class="row fullwith-slider"></div>
     </div>
-    <div class="container">
-        <div class="row container" id="wrapper">
-            <div class="halim-panel-filter">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="yoast_breadcrumb hidden-xs"><span><span><a href="">Phim hay</a> » <span
-                                            class="breadcrumb_last" aria-current="page">2020</span></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="ajax-filter" class="panel-collapse collapse" aria-expanded="true" role="menu">
-                    <div class="ajax"></div>
-                </div>
-            </div>
-            <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4">
-                <div id="halim_tab_popular_videos-widget-7" class="widget halim_tab_popular_videos-widget">
-                    <div class="section-bar clearfix">
-                        <div class="section-title">
-                            <span>Top Views</span>
-                        </div>
-                    </div>
-                    <section class="tab-content">
-                        <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
-                            <div class="halim-ajax-popular-post-loading hidden"></div>
-                            <div id="halim-ajax-popular-post" class="popular-post">
-                                <div class="item post-37176">
-                                    <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
-                                        <div class="item-link">
-                                            <img src="https://ghienphim.org/uploads/GPax0JpZbqvIVyfkmDwhRCKATNtLloFQ.jpeg?v=1624801798"
-                                                class="lazy post-thumb" alt="CHỊ MƯỜI BA: BA NGÀY SINH TỬ"
-                                                title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ" />
-                                            <span class="is_trailer">Trailer</span>
-                                        </div>
-                                        <p class="title">CHỊ MƯỜI BA: BA NGÀY SINH TỬ</p>
-                                    </a>
-                                    <div class="viewsCount" style="color: #9d9d9d;">3.2K lượt xem</div>
-                                    <div style="float: left;">
-                                        <span class="user-rate-image post-large-rate stars-large-vang"
-                                            style="display: block;/* width: 100%; */">
-                                            <span style="width: 0%"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <div class="clearfix"></div>
-                </div>
-            </aside>
-        </div>
-    </div>
+
+    @yield('content')
+
     <div class="clearfix"></div>
     <footer id="footer" class="clearfix">
         <div class="container footer-columns">
