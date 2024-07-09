@@ -12,14 +12,13 @@ class MovieController extends Controller
         if (!$film) {
             return redirect()->back()->with('error', 'Movie not found');
         }
-    
         $movie = new Movies();
         $relation = Movies::where('vietsub', $film->vietsub)->where('slug', '!=', $slug)->get();
         $top = Movies::orderBy('view', 'desc')->limit(10)->get();
         if ($film->type_release == 'single') {
             return view('client.watching', compact('film', 'relation', 'top'));
         } else {
-            $page = $req->input('tap'); 
+            $page = $req->input('tap') - 1;
             return view('client.watching', compact('film', 'relation', 'top', 'page'));
         }
     }
@@ -27,7 +26,7 @@ class MovieController extends Controller
     public function detail($slug){
         $movie = new Movies();
         $film = $movie::where('slug',$slug)->first();
-        $relation = $movie::where('vietsub',$film['vietsub'])->get() ;
+        $relation = $movie::where('vietsub',$film['vietsub'])->where('slug', '!=', $slug)->limit('12')->get() ;
         $top = Movies::orderBy('view', 'desc')->limit(10)->get();
         return view('client.detail',compact('film','top','relation'));
     }

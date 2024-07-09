@@ -138,7 +138,7 @@
               <h4 class="mb-2">Welcome to Sneat! 👋</h4>
               <p class="mb-4">Please sign-in to your account and start the adventure</p>
               @if ($errors->has('wait'))
-<p>{{ $errors->first('wait') }}</p>
+<p class="text-danger">{{ $errors->first('wait') }}</p>
 @endif
               <form id="formAuthentication" class="mb-3" action="{{ route('admin.login.logon') }}" method="POST">
                 <div class="mb-3">

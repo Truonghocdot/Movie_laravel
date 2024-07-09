@@ -16,9 +16,12 @@
         type="image/x-icon" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="revisit-after" content="1 days" />
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <title>Phim hay 2021 - Xem phim hay nhất</title>
+    <title>Xem phim hay nhất</title>
     <meta name="description"
         content="Phim hay 2021 - Xem phim hay nhất, xem phim online miễn phí, phim hot , phim nhanh" />
     <link rel="canonical" href="">
@@ -62,7 +65,7 @@
         <div class="container">
             <div class="row" id="headwrap">
                 <div class="col-md-3 col-sm-6 slogan">
-                    <p class="site-title"><a class="logo" href="" title="phim hay ">Phim Hay</p>
+                    <p class="site-title"><a class="logo" href="{{ route('home') }}" title="phim hay ">Phim Hay</p>
                     </a>
                 </div>
                 <div class="col-md-5 col-sm-6 halim-search-form hidden-xs">
@@ -81,103 +84,181 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hidden-xs">
-                    <div id="get-bookmark" class="box-shadow"><i class="hl-bookmark"></i><span> Bookmarks</span><span
-                            class="count">0</span></div>
-                    <div id="bookmark-list" class="hidden bookmark-list-on-pc">
-                        <ul style="margin: 0;"></ul>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
     <div class="navbar-container">
         <div class="container">
             <nav class="navbar halim-navbar main-navigation" role="navigation" data-dropdown-hover="1">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse"
-                        data-target="#halim" aria-expanded="false">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <button type="button" class="navbar-toggle collapsed pull-right expand-search-form"
-                        data-toggle="collapse" data-target="#search-form" aria-expanded="false">
-                        <span class="hl-search" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="navbar-toggle collapsed pull-right get-bookmark-on-mobile">
-                        Bookmarks<i class="hl-bookmark" aria-hidden="true"></i>
-                        <span class="count">0</span>
-                    </button>
-                    <button type="button" class="navbar-toggle collapsed pull-right get-locphim-on-mobile">
-                        <a href="javascript:;" id="expand-ajax-filter" style="color: #ffed4d;">Lọc <i
-                                class="fas fa-filter"></i></a>
-                    </button>
-                </div>
                 <div class="collapse navbar-collapse" id="halim">
                     <div class="menu-menu_1-container">
                         <ul id="menu-menu_1" class="nav navbar-nav navbar-left">
-                            <li class="current-menu-item active"><a title="Trang Chủ" href="index.php">Trang Chủ</a>
+                            <li class="current-menu-item active"><a title="Trang Chủ"
+                                    href="={{ route('home') }}">Trang Chủ</a>
                             </li>
-                            <li class="mega"><a title="Phim Mới" href="danhmuc.php">Phim Mới</a></li>
+                            <li class="mega"><a title="Phim Mới" href="{{ route('film.new') }}">Phim Mới</a></li>
                             <li class="mega dropdown">
                                 <a title="Năm" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Năm <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Phim 2020" href="danhmuc.php">Phim 2020</a></li>
-                                    <li><a title="Năm 2019" href="danhmuc.php">Năm 2019</a></li>
-                                    <li><a title="Năm 2018" href="danhmuc.php">Năm 2018</a></li>
+                                    <li><a title="Phim 2020" href="{{ route('film.year', ['year' => 2024]) }}">Phim
+                                            2024</a></li>
+                                    <li><a title="Năm 2019" href="{{ route('film.year', ['year' => 2023]) }}">Năm
+                                            2023</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2022]) }}">Năm
+                                            2022</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2021]) }}">Năm
+                                            2021</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2020]) }}">Năm
+                                            2020</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2019]) }}">Năm
+                                            2019</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2018]) }}">Năm
+                                            2018</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2017]) }}">Năm
+                                            2017</a></li>
+                                    <li><a title="Năm 2018" href="{{ route('film.year', ['year' => 2016]) }}">Năm
+                                            2016</a></li>
                                 </ul>
                             </li>
                             <li class="mega dropdown">
                                 <a title="Thể Loại" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Thể Loại <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Tâm Lý" href="danhmuc.php">Tâm Lý</a></li>
-                                    <li><a title="Hành động" href="">Hành động</a></li>
-                                    <li><a title="Viễn Tưởng" href="">Viễn Tưởng</a></li>
-                                    <li><a title="Hoạt Hình" href="danhmuc.php">Hoạt Hình</a></li>
-                                    <li><a title="Kinh Dị" href="danhmuc.php">Kinh Dị</a></li>
-                                    <li><a title="Hài Hước" href="danhmuc.php">Hài Hước</a></li>
-                                    <li><a title="Hình Sự" href="danhmuc.php">Hình Sự</a></li>
-                                    <li><a title="Võ Thuật" href="danhmuc.php">Võ Thuật</a></li>
-                                    <li><a title="Cổ Trang" href="danhmuc.php">Cổ Trang</a></li>
-                                    <li><a title="Phim Ma" href="danhmuc.php">Phim Ma</a></li>
-                                    <li><a title="Tình Cảm" href="danhmuc.php">Tình Cảm</a></li>
-                                    <li><a title="Thể Thao - Âm Nhạc" href="danhmuc.php">Thể Thao &#8211; Âm Nhạc</a>
+                                    <li><a title="Tâm Lý"
+                                            href="{{ route('film.category', [
+                                                'category' => 'tam-ly',
+                                            ]) }}">Tâm
+                                            Lý</a></li>
+                                    <li><a title="Hành động"
+                                            href="{{ route('film.category', [
+                                                'category' => 'hanh-dong',
+                                            ]) }}">Hành
+                                            động</a></li>
+                                    <li><a title="Viễn Tưởng"
+                                            href="{{ route('film.category', [
+                                                'category' => 'vien-tuong',
+                                            ]) }}">Viễn
+                                            Tưởng</a></li>
+                                    <li><a title="Kinh Dị"
+                                            href="{{ route('film.category', [
+                                                'category' => 'kinh-di',
+                                            ]) }}">Kinh
+                                            Dị</a></li>
+                                    <li><a title="Hài Hước"
+                                            href="{{ route('film.category', [
+                                                'category' => 'hai-huoc',
+                                            ]) }}">Hài
+                                            Hước</a>
                                     </li>
-                                    <li><a title="Thần Thoại" href="danhmuc.php">Thần Thoại</a></li>
-                                    <li><a title="Tài Liệu" href="danhmuc.php">Tài Liệu</a></li>
-                                    <li><a title="Phiêu Lưu" href="danhmuc.php">Phiêu Lưu</a></li>
-                                    <li><a title="Gia Đình" href="danhmuc.php">Gia Đình</a></li>
-                                    <li><a title="Chiến Tranh" href="danhmuc.php">Chiến Tranh</a></li>
+                                    <li><a title="Hình Sự"
+                                            href="{{ route('film.category', [
+                                                'category' => 'hinh-su',
+                                            ]) }}">Hình
+                                            Sự</a></li>
+                                    <li><a title="Võ Thuật"
+                                            href="{{ route('film.category', [
+                                                'category' => 'vo-thuat',
+                                            ]) }}">Võ
+                                            Thuật</a>
+                                    </li>
+                                    <li><a title="Cổ Trang"
+                                            href="{{ route('film.category', [
+                                                'category' => 'co-trang',
+                                            ]) }}">Cổ
+                                            Trang</a>
+                                    </li>
+                                    <li><a title="Phim Ma"
+                                            href="{{ route('film.category', [
+                                                'category' => 'phim-ma',
+                                            ]) }}">Phim
+                                            Ma</a></li>
+                                    <li><a title="Tình Cảm"
+                                            href="{{ route('film.category', [
+                                                'category' => 'tinh-cam',
+                                            ]) }}">Tình
+                                            Cảm</a>
+                                    </li>
+                                    <li><a title="Thể Thao - Âm Nhạc"
+                                            href="{{ route('film.category', [
+                                                'category' => 'am-nhac',
+                                            ]) }}">Thể
+                                            Thao &#8211; Âm Nhạc</a>
+                                    </li>
+                                    <li><a title="Thần Thoại"
+                                            href="{{ route('film.category', [
+                                                'category' => 'than-thoai',
+                                            ]) }}">Thần
+                                            Thoại</a>
+                                    </li>
+                                    <li><a title="Tài Liệu"
+                                            href="{{ route('film.category', [
+                                                'category' => 'tai-lieu',
+                                            ]) }}">Tài
+                                            Liệu</a>
+                                    </li>
+                                    <li><a title="Phiêu Lưu"
+                                            href="{{ route('film.category', [
+                                                'category' => 'phieu-luu',
+                                            ]) }}">Phiêu
+                                            Lưu</a>
+                                    </li>
+                                    <li><a title="Gia Đình"
+                                            href="{{ route('film.category', [
+                                                'category' => 'gia-dinh',
+                                            ]) }}">Gia
+                                            Đình</a>
+                                    </li>
+                                    <li><a title="Chiến Tranh"
+                                            href="{{ route('film.category', [
+                                                'category' => 'chien-tran',
+                                            ]) }}">Chiến
+                                            Tranh</a></li>
                                 </ul>
                             </li>
                             <li class="mega dropdown">
                                 <a title="Quốc Gia" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Quốc Gia <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Việt nam" href="danhmuc.php">Việt nam</a></li>
-                                    <li><a title="Ấn Độ" href="danhmuc.php">Ấn Độ</a></li>
-                                    <li><a title="Mỹ" href="danhmuc.php">Mỹ</a></li>
-                                    <li><a title="Hồng Kông" href="danhmuc.php">Hồng Kông</a></li>
-                                    <li><a title="Nhật Bản" href="danhmuc.php">Nhật Bản</a></li>
-                                    <li><a title="Trung Quốc" href="danhmuc.php">Trung Quốc</a></li>
-                                    <li><a title="Hàn Quốc" href="danhmuc.php">Hàn Quốc</a></li>
-                                    <li><a title="Đài Loan" href="danhmuc.php">Đài Loan</a></li>
-                                    <li><a title="Thái Lan" href="danhmuc.php">Thái Lan</a></li>
-                                    <li><a title="Philippin" href="danhmuc.php">Philippin</a></li>
+                                    <li><a title="Việt nam"
+                                            href="{{ route('film.country', ['country' => 'viet-nam']) }}">Việt
+                                            nam</a></li>
+                                    <li><a title="Ấn Độ"
+                                            href="{{ route('film.country', ['country' => 'an-do']) }}">Ấn
+                                            Độ</a></li>
+                                    <li><a title="Mỹ"
+                                            href="{{ route('film.country', ['country' => 'au-my']) }}">Âu
+                                            Mỹ</a>
+                                    </li>
+                                    <li><a title="Hồng Kông"
+                                            href="{{ route('film.country', ['country' => 'hong-kong']) }}">Hồng
+                                            Kông</a></li>
+                                    <li><a title="Nhật Bản"
+                                            href="{{ route('film.country', ['country' => 'nhat-ban']) }}">Nhật
+                                            Bản</a></li>
+                                    <li><a title="Trung Quốc"
+                                            href="{{ route('film.country', ['country' => 'trung-quoc']) }}">Trung
+                                            Quốc</a></li>
+                                    <li><a title="Hàn Quốc"
+                                            href="{{ route('film.country', ['country' => 'han-quoc']) }}">Hàn
+                                            Quốc</a></li>
+                                    <li><a title="Đài Loan"
+                                            href="{{ route('film.country', ['country' => 'dai-loan']) }}">Đài
+                                            Loan</a></li>
+                                    <li><a title="Thái Lan"
+                                            href="{{ route('film.country', ['country' => 'thai-lan']) }}">Thái
+                                            Lan</a></li>
+                                    <li><a title="Philippin"
+                                            href="{{ route('film.country', ['country' => 'philippines']) }}">Philippin</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <li><a title="Phim Lẻ" href="danhmuc.php">Phim Lẻ</a></li>
-                            <li><a title="Phim Bộ" href="danhmuc.php">Phim Bộ</a></li>
-                            <li><a title="Phim Chiếu Rạp" href="danhmuc.php">Phim Chiếu Rạp</a></li>
+                            <li><a title="Phim Lẻ" href="{{ route('film.single') }}">Phim Lẻ</a></li>
+                            <li><a title="Phim Bộ" href="{{ route('film.series') }}">Phim Bộ</a></li>
+                            <li><a title="Phim Bộ" href="{{ route('film.cartoon') }}">Hoạt Hình</a></li>
+                            <li><a title="Phim Chiếu Rạp" href="{{ route('film.theater') }}">Phim Chiếu Rạp</a></li>
                         </ul>
                     </div>
-                    <ul class="nav navbar-nav navbar-left" style="background:#000;">
-                        <li><a href="#" onclick="locphim()" style="color: #ffed4d;">Lọc Phim</a></li>
-                    </ul>
                 </div>
             </nav>
             <div class="collapse navbar-collapse" id="search-form">
@@ -216,15 +297,16 @@
                         <div class="halim-movie-wrapper">
                             <div class="movie_info col-xs-12">
                                 <div class="movie-poster col-md-3">
-                                    <img class="movie-thumb" src="{{ $film->thumb_url }}" alt="{{ $film->name }}">
+                                    <img class="movie-thumb" src="{{ $film->thumb_url }}"
+                                        alt="{{ $film->name }}">
                                     <div class="bwa-content">
                                         <div class="loader"></div>
-                                        @if ($film->type_release == 'series')
+                                        @if ($film->type == 'tv')
                                             <a href="{{ route('watching', ['slug' => $film->slug]) }}?tap=1"
                                                 class="bwac-btn">
                                                 <i class="fa fa-play"></i>
                                             </a>
-                                        @else
+                                        @elseif($film->type == 'movie')
                                             <a href="{{ route('watching', ['slug' => $film->slug]) }}"
                                                 class="bwac-btn">
                                                 <i class="fa fa-play"></i>
@@ -242,7 +324,8 @@
                                     <ul class="list-info-group">
                                         <li class="list-info-group-item"><span>Trạng Thái</span> : <span
                                                 class="quality">{{ $film->quality }}</span><span
-                                                class="episode">{{ $film->vietsub }}</span></li>
+                                                class="episode">{{ $film->vietsub }}</span> {{ $film->status }} </li>
+
                                         <li class="list-info-group-item"><span>Thời lượng</span> : {{ $film->time }}
                                         </li>
                                         <li class="list-info-group-item"><span>Thể loại</span> :
@@ -286,16 +369,14 @@
                                 <div role="tabpanel" class="tab-pane active server-1" id="server-0">
                                     <div class="halim-server">
                                         <ul class="halim-list-eps">
-                                            @if ($film->type_release == 'series')
+                                            @if ($film->type == 'tv')
                                                 @foreach ($film->episodes as $item)
-                                                    <li class="halim-episode"><span
-                                                            class="halim-btn halim-btn-2 active halim-info-1-1 box-shadow">
-                                                            <a
-                                                                href="{{ route('watching', ['slug' => $film->slug]) }}?tap={{ $item['name'] }}">{{ $item['name'] }}</a>
-                                                        </span>
+                                                    <li class="halim-episode">
+                                                        <a href="{{ route('watching', ['slug' => $film->slug]) }}?tap={{ $item['name'] }}"
+                                                            style="display: inline-block; background-color: red; padding: 4px 15px; color: #fff;border-radius: 2px">{{ $item['name'] }}</a>
                                                     </li>
                                                 @endforeach
-                                            @else
+                                            @elseif($film->type == 'movie')
                                                 <li class="halim-episode"><span
                                                         class="halim-btn halim-btn-2 active halim-info-1-1 box-shadow">Full</span>
                                                 </li>
@@ -315,11 +396,20 @@
                         <div class="entry-content htmlwrap clearfix">
                             <div class="video-item halim-entry-box">
                                 <article id="post-38424" class="item-content">
-                                    Phim <a href="https://phimhay.co/goa-phu-den-38424/">{{ $film->name }}</a> -
+                                    Phim <a href="">{{ $film->name }}</a> -
                                     {{ $film->year }} :
                                     {!! $film->content !!}
                                 </article>
                             </div>
+                        </div>
+                        <div class="section-bar clearfix">
+                            <h2 class="section-title"><span style="color:#ffed4d">Chia sẻ phim</span></h2>
+                        </div>
+                        <div class="entry-content htmlwrap clearfix">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}"
+                                target="_blank">
+                                Share on Facebook
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -352,7 +442,6 @@
                                 </article>
                             @endforeach
                         </div>
-                        {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> --}}
                         <script>
                             jQuery(document).ready(function($) {
                                 var owl = $('#halim_related_movies-2');
@@ -361,8 +450,8 @@
                                     margin: 1,
                                     autoplay: true,
                                     nav: true,
-                                    navText: ['<i class="hl-down-open rotate-left"></i>',
-                                        '<i class="hl-down-open rotate-right"></i>'
+                                    navText: ['<i class="fa-solid fa-arrow-left"></i>',
+                                        '<i class="fa-solid fa-arrow-right"></i>'
                                     ],
                                     items: 5,
                                     responsiveClass: true,
@@ -447,7 +536,6 @@
     </script>
     <script type='text/javascript' src='{{ url('') }}/js-client/owl.carousel.min.js?ver=5.7.2' id='carousel-js'>
     </script>
-
     <script type='text/javascript' src='{{ url('') }}/js-client/halimtheme-core.min.js?ver=1626273138'
         id='halim-init-js'></script>
 

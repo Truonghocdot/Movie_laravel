@@ -1,13 +1,19 @@
 @extends('layouts.admin')
 @section('main')
     <div class="container-xxl flex-grow-1 container-p-y">
+        <form action="{{ route('admin.movies') }}" method="GET">
+            @csrf
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Tìm phim ở đây</label>
+                <input type="text" class="form-control" name="film" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+        </form>
         <div class="card">
             <h5 class="card-header">Light Table head</h5>
             <div class="table-responsive text-nowrap">
                 <table class="table">
                     <thead class="table-light">
                         <tr>
-                            <th>_id</th>
                             <th>name</th>
                             <th>original name</th>
                             <th>status</th>
@@ -23,7 +29,6 @@
                         @if (count($movies) > 0)
                             @foreach ($movies as $item)
                                 <tr>
-                                    <td>{{ $item->_id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->origin_name }}</td>
                                     <td>{{ $item->status }}</td>

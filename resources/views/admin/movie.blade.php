@@ -5,7 +5,7 @@
             <div class="row mb-5">
                 <div class="col-md-6 col-lg-3 ">
                     <div class="card h-100">
-                        <img class="card-img-top " style="object-fit: cover;height: 82%;" src="{{ $movie['poster_url'] }}"
+                        <img class="card-img-top " style="object-fit: cover;height: 82%;" src="{{ $movie['thumb_url'] }}"
                             alt="Card image cap" />
 
                         <a href="#wath-film" class="btn btn-primary">Watch Film</a>

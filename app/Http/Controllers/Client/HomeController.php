@@ -13,7 +13,8 @@ class HomeController extends Controller
         $series = Movies::where('type_release', 'series')->paginate(8);
         $single = Movies::where('type_release', 'single')->paginate(8);
         $top = Movies::orderBy('view', 'desc')->limit(10)->get();
-        return view('client.index', compact('theater_screen', 'series', 'single', 'top'));
+        $cartoon = Movies::where('type_release','hoathinh')->limit(8)->get();
+        return view('client.index', compact('theater_screen', 'series', 'single', 'top','cartoon'));
     }
     
 }

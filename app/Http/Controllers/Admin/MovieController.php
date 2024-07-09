@@ -3,32 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\Models\Movies;
 use GuzzleHttp\Exception\RequestException;
+use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    public function index(){
-        $movies = Movies::paginate(7);
-        return view('admin.movies',compact('movies'));    
-        // $client = new Client();
-        // $url = 'https://api.example.com/data'; // URL của API bạn cần gọi
-
-        // try {
-        //     $response = $client->request('GET', $url);
-        //     $statusCode = $response->getStatusCode();
-        //     $body = $response->getBody();
-        //     $data = json_decode($body, true); // Chuyển đổi dữ liệu JSON sang mảng PHP
-
-        //     return response()->json($data);
-        // } catch (\Exception $e) {
-        //     return response()->json([
-        //         'error' => 'Something went wrong!',
-        //         'message' => $e->getMessage()
-        //     ], 500);
-        // }
+    public function index(Request $req){
+        if($req['film']){
+            $movies = Movies::where('name','LIKE','%' . $req['film'] . "%" )->paginate(7);
+            return view('admin.movies',compact('movies'));
+        }else{
+            $movies = Movies::paginate(7);
+            return view('admin.movies',compact('movies'));
+        }    
     }
 
     public function detail_movie($slug){
@@ -56,6 +45,7 @@ class MovieController extends Controller
             $movie['category'] = $data['movie']['category'] ;
             $movie['thumb_url'] = $data['movie']['thumb_url'] ;
             $movie['poster_url'] = $data['movie']['poster_url'] ;
+            $movie['trailer_url'] = $data['movie']['trailer_url'];
             $movie['country'] = $data['movie']['country'] ;
             $movie['director'] = $data['movie']['director'] ;
             $movie['actor'] = $data['movie']['actor'] ;

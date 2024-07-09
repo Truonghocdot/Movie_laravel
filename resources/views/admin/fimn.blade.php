@@ -11,11 +11,10 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <h5 class="card-header">Light Table head</h5>
-            <div class="table-responsive text-nowrap">
+            <div class="table-responsive text-nowrap ">
                 <table class="table">
                     <thead class="table-light">
                         <tr>
-                            <th>_id</th>
                             <th>name</th>
                             <th>original name</th>
                             <th>poster</th>
@@ -28,10 +27,9 @@
                         @if (count($movies) > 0)
                             @foreach ($movies as $item)
                                 <tr>
-                                    <td>{{ $item['_id'] }}</td>
                                     <td>{{ $item['name'] }}</td>
                                     <td>{{ $item['origin_name'] }}</td>
-                                    <td> <img src="https://img.ophim.live/uploads/movies/{{ $item['poster_url'] }}"
+                                    <td> <img src="https://img.ophim.live/uploads/movies/{{ $item['thumb_url'] }}"
                                             alt="Avatar" class="" style="max-width: 240px; border-radius: 8%"
                                             loading="lazy" /> </td>
                                     <td>{{ $item['year'] }}</td>
