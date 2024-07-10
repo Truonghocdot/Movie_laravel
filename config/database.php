@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,9 +109,11 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
         'mongodb' => [
-            'driver' => 'mongodb',
-            'dsn' => env('DB_URI', 'mongodb://localhost:27017/cinema'),
-            'database' => 'cinema',
+            'driver'   => 'mongodb',
+            'host'     => env('DB_MONGODB_HOST', 'localhost'),
+            'port'     => env('DB_MONGODB_PORT', 27017),
+            // 'dsn'      => env('DB_MONGODB_DSN', 'mongodb+srv://truonghocdot:5zEcaJNdb4Nkenh@atlascluster.iwgiywq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClusters'),
+            'database' => env('DB_MONGODB_DATABASE', 'cinema'),
         ],
     ],
 

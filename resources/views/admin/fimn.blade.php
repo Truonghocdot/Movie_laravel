@@ -59,7 +59,7 @@
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    @for ($i = 1; $i < 34; $i++)
+                    @for ($i = 1; $i < 1000; $i++)
                         <li class="page-item"><a class="page-link"
                                 href="{{ route('admin.movies.new') . '?page=' . $i }}">{{ $i }}</a></li>
                     @endfor

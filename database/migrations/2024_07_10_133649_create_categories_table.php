@@ -13,11 +13,11 @@ return new class extends Migration
 
     public function up(): void
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
 
-            $table->uuid('uid');
-            $table->tinyInteger('status')->default(0);
+            $table->string('name');
+            $table->string('slug');
 
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('activities');
+        Schema::dropIfExists('categories');
     }
 };

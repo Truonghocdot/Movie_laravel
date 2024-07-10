@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Visit extends Model
 {
     use HasFactory;
+
+    protected $connection = 'mongodb';
+    protected $collection = 'visits';
+    protected $fillable = ['ip_address','url'];
 }
