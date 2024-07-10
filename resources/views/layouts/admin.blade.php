@@ -104,26 +104,22 @@
                                 </g>
                             </svg>
                         </span>
-                        <span class="app-brand-text demo menu-text fw-bolder ms-2">Sneat</span>
+                        <span class="app-brand-text demo menu-text fw-bolder ms-2"
+                            style="text-transform: capitalize">Truonghocdot</span>
                     </a>
-
                     <a href="javascript:void(0);"
                         class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
                         <i class="bx bx-chevron-left bx-sm align-middle"></i>
                     </a>
                 </div>
-
                 <div class="menu-inner-shadow"></div>
-
                 <ul class="menu-inner py-1">
-                    <!-- Dashboard -->
                     <li class="menu-item active">
                         <a href="{{ route('dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Pages</span>
                     </li>
@@ -133,11 +129,6 @@
                             <div data-i18n="Account Settings">Account </div>
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="pages-account-settings-account.html" class="menu-link">
-                                    <div data-i18n="Account">Client</div>
-                                </a>
-                            </li>
                             <li class="menu-item">
                                 <a href="pages-account-settings-notifications.html" class="menu-link">
                                     <div data-i18n="Notifications">Admin </div>
@@ -149,6 +140,16 @@
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                             <div data-i18n="Authentications">Advertising</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('admin.categories') }}" class="menu-link">
+                            <div data-i18n="Under Maintenance">Categories</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{{ route('admin.countries') }}" class="menu-link">
+                            <div data-i18n="Under Maintenance">Country</div>
                         </a>
                     </li>
                     <li class="menu-item">

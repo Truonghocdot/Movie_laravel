@@ -18,14 +18,11 @@ return new class extends Migration
 
             $collection->string('ip_address');
             $collection->string('url');
-
+            $collection->string('user_agent');
             $collection->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('visits');

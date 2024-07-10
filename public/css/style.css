@@ -2890,7 +2890,7 @@ tr.title {
 
 .no-js .owl-carousel,
 .owl-carousel.owl-loaded {
-    display: block
+    display: inline-block
 }
 
 .owl-carousel .owl-dot,

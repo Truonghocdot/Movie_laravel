@@ -131,7 +131,7 @@
                       </g>
                     </svg>
                   </span>
-                  <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
+                  <span class="app-brand-text demo text-body fw-bolder" style="text-transform: capitalize">Truonghocdot</span>
                 </a>
               </div>
               <!-- /Logo -->
@@ -153,11 +153,11 @@
                 </div>
                 @error('username')
     <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                                                                                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                                                                                                                      <div>
-                                                                                                                        {{ $message }}
-                                                                                                                      </div>
-                                                                                                                    </div>
+                                                                                                                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                                                                                                          <div>
+                                                                                                                            {{ $message }}
+                                                                                                                          </div>
+                                                                                                                        </div>
 @enderror
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
@@ -168,11 +168,11 @@
                 </div>
                 @error('email')
     <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                                                                                      <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                                                                                                                      <div>
-                                                                                                                        {{ $message }}
-                                                                                                                      </div>
-                                                                                                                    </div>
+                                                                                                                          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                                                                                                          <div>
+                                                                                                                            {{ $message }}
+                                                                                                                          </div>
+                                                                                                                        </div>
 @enderror
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Password</label>
@@ -191,11 +191,11 @@
                 </div>
                 @error('password')
     <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                                                    <div>
-                                                      {{ $message }}
-                                                    </div>
-                                                  </div>
+                                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                                        <div>
+                                                          {{ $message }}
+                                                        </div>
+                                                      </div>
 @enderror
                 <div class="mb-3 form-password-toggle">
                   <label class="form-label" for="password">Confirm Password</label>
@@ -215,11 +215,11 @@
                 </div>
                 @error('password_confirmation')
     <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                                                    <div>
-                                                      {{ $message }}
-                                                    </div>
-                                                  </div>
+                                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                                        <div>
+                                                          {{ $message }}
+                                                        </div>
+                                                      </div>
 @enderror
                 <div class="mb-3">
                   <div class="form-check">
@@ -232,11 +232,11 @@
                 </div>
                 @error('terms')
     <div class="alert alert-warning d-flex align-items-center" role="alert">
-                                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                                                    <div>
-                                                      {{ $message }}
-                                                    </div>
-                                                  </div>
+                                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                                        <div>
+                                                          {{ $message }}
+                                                        </div>
+                                                      </div>
 @enderror
                 <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
               </form>

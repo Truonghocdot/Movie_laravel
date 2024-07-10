@@ -125,132 +125,25 @@
                                 <a title="Thể Loại" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Thể Loại <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Tâm Lý"
-                                            href="{{ route('film.category', [
-                                                'category' => 'tam-ly',
-                                            ]) }}">Tâm
-                                            Lý</a></li>
-                                    <li><a title="Hành động"
-                                            href="{{ route('film.category', [
-                                                'category' => 'hanh-dong',
-                                            ]) }}">Hành
-                                            động</a></li>
-                                    <li><a title="Viễn Tưởng"
-                                            href="{{ route('film.category', [
-                                                'category' => 'vien-tuong',
-                                            ]) }}">Viễn
-                                            Tưởng</a></li>
-                                    <li><a title="Kinh Dị"
-                                            href="{{ route('film.category', [
-                                                'category' => 'kinh-di',
-                                            ]) }}">Kinh
-                                            Dị</a></li>
-                                    <li><a title="Hài Hước"
-                                            href="{{ route('film.category', [
-                                                'category' => 'hai-huoc',
-                                            ]) }}">Hài
-                                            Hước</a>
-                                    </li>
-                                    <li><a title="Hình Sự"
-                                            href="{{ route('film.category', [
-                                                'category' => 'hinh-su',
-                                            ]) }}">Hình
-                                            Sự</a></li>
-                                    <li><a title="Võ Thuật"
-                                            href="{{ route('film.category', [
-                                                'category' => 'vo-thuat',
-                                            ]) }}">Võ
-                                            Thuật</a>
-                                    </li>
-                                    <li><a title="Cổ Trang"
-                                            href="{{ route('film.category', [
-                                                'category' => 'co-trang',
-                                            ]) }}">Cổ
-                                            Trang</a>
-                                    </li>
-                                    <li><a title="Phim Ma"
-                                            href="{{ route('film.category', [
-                                                'category' => 'phim-ma',
-                                            ]) }}">Phim
-                                            Ma</a></li>
-                                    <li><a title="Tình Cảm"
-                                            href="{{ route('film.category', [
-                                                'category' => 'tinh-cam',
-                                            ]) }}">Tình
-                                            Cảm</a>
-                                    </li>
-                                    <li><a title="Thể Thao - Âm Nhạc"
-                                            href="{{ route('film.category', [
-                                                'category' => 'am-nhac',
-                                            ]) }}">Thể
-                                            Thao &#8211; Âm Nhạc</a>
-                                    </li>
-                                    <li><a title="Thần Thoại"
-                                            href="{{ route('film.category', [
-                                                'category' => 'than-thoai',
-                                            ]) }}">Thần
-                                            Thoại</a>
-                                    </li>
-                                    <li><a title="Tài Liệu"
-                                            href="{{ route('film.category', [
-                                                'category' => 'tai-lieu',
-                                            ]) }}">Tài
-                                            Liệu</a>
-                                    </li>
-                                    <li><a title="Phiêu Lưu"
-                                            href="{{ route('film.category', [
-                                                'category' => 'phieu-luu',
-                                            ]) }}">Phiêu
-                                            Lưu</a>
-                                    </li>
-                                    <li><a title="Gia Đình"
-                                            href="{{ route('film.category', [
-                                                'category' => 'gia-dinh',
-                                            ]) }}">Gia
-                                            Đình</a>
-                                    </li>
-                                    <li><a title="Chiến Tranh"
-                                            href="{{ route('film.category', [
-                                                'category' => 'chien-tran',
-                                            ]) }}">Chiến
-                                            Tranh</a></li>
+                                    @foreach ($categories as $item)
+                                        <li><a title="{{ $item->name }}"
+                                                href="{{ route('film.category', [
+                                                    'category' => $item->slug,
+                                                ]) }}"
+                                                style="text-transform: capitalize">{{ $item->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li class="mega dropdown">
                                 <a title="Quốc Gia" href="#" data-toggle="dropdown" class="dropdown-toggle"
                                     aria-haspopup="true">Quốc Gia <span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
-                                    <li><a title="Việt nam"
-                                            href="{{ route('film.country', ['country' => 'viet-nam']) }}">Việt
-                                            nam</a></li>
-                                    <li><a title="Ấn Độ"
-                                            href="{{ route('film.country', ['country' => 'an-do']) }}">Ấn
-                                            Độ</a></li>
-                                    <li><a title="Mỹ"
-                                            href="{{ route('film.country', ['country' => 'au-my']) }}">Âu
-                                            Mỹ</a>
-                                    </li>
-                                    <li><a title="Hồng Kông"
-                                            href="{{ route('film.country', ['country' => 'hong-kong']) }}">Hồng
-                                            Kông</a></li>
-                                    <li><a title="Nhật Bản"
-                                            href="{{ route('film.country', ['country' => 'nhat-ban']) }}">Nhật
-                                            Bản</a></li>
-                                    <li><a title="Trung Quốc"
-                                            href="{{ route('film.country', ['country' => 'trung-quoc']) }}">Trung
-                                            Quốc</a></li>
-                                    <li><a title="Hàn Quốc"
-                                            href="{{ route('film.country', ['country' => 'han-quoc']) }}">Hàn
-                                            Quốc</a></li>
-                                    <li><a title="Đài Loan"
-                                            href="{{ route('film.country', ['country' => 'dai-loan']) }}">Đài
-                                            Loan</a></li>
-                                    <li><a title="Thái Lan"
-                                            href="{{ route('film.country', ['country' => 'thai-lan']) }}">Thái
-                                            Lan</a></li>
-                                    <li><a title="Philippin"
-                                            href="{{ route('film.country', ['country' => 'philippines']) }}">Philippin</a>
-                                    </li>
+                                    @foreach ($countries as $item)
+                                        <li><a title="{{ $item->name }}"
+                                                href="{{ route('film.country', ['country' => $item->slug]) }}"
+                                                style="text-transform: capitalize">{{ $item->name }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li><a title="Phim Lẻ" href="{{ route('film.single') }}">Phim Lẻ</a></li>
@@ -301,12 +194,16 @@
                                         alt="{{ $film->name }}">
                                     <div class="bwa-content">
                                         <div class="loader"></div>
-                                        @if ($film->type == 'tv')
+                                        @if (count($film->episodes) > 1 || $film->type_release == 'series')
                                             <a href="{{ route('watching', ['slug' => $film->slug]) }}?tap=1"
                                                 class="bwac-btn">
                                                 <i class="fa fa-play"></i>
                                             </a>
-                                        @elseif($film->type == 'movie')
+                                        @elseif($film->status == 'trailer')
+                                            <a href="#" class="bwac-btn">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        @else
                                             <a href="{{ route('watching', ['slug' => $film->slug]) }}"
                                                 class="bwac-btn">
                                                 <i class="fa fa-play"></i>
@@ -369,14 +266,19 @@
                                 <div role="tabpanel" class="tab-pane active server-1" id="server-0">
                                     <div class="halim-server">
                                         <ul class="halim-list-eps">
-                                            @if ($film->type == 'tv')
+                                            @if (count($film->episodes) > 1 || $film->type_release == 'series')
                                                 @foreach ($film->episodes as $item)
                                                     <li class="halim-episode">
                                                         <a href="{{ route('watching', ['slug' => $film->slug]) }}?tap={{ $item['name'] }}"
                                                             style="display: inline-block; background-color: red; padding: 4px 15px; color: #fff;border-radius: 2px">{{ $item['name'] }}</a>
                                                     </li>
                                                 @endforeach
-                                            @elseif($film->type == 'movie')
+                                            @elseif($film->status == 'trailer')
+                                                <li class="halim-episode"><span
+                                                        class="halim-btn halim-btn-2 active halim-info-1-1 box-shadow">Đang
+                                                        cập nhật</span>
+                                                </li>
+                                            @else
                                                 <li class="halim-episode"><span
                                                         class="halim-btn halim-btn-2 active halim-info-1-1 box-shadow">Full</span>
                                                 </li>

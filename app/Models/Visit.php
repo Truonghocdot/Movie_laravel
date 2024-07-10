@@ -11,5 +11,5 @@ class Visit extends Model
 
     protected $connection = 'mongodb';
     protected $collection = 'visits';
-    protected $fillable = ['ip_address','url'];
+    protected $fillable = ['ip_address','url','user_agent'];
 }

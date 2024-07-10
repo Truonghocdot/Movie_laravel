@@ -110,9 +110,7 @@ return [
         ],
         'mongodb' => [
             'driver'   => 'mongodb',
-            'host'     => env('DB_MONGODB_HOST', 'localhost'),
-            'port'     => env('DB_MONGODB_PORT', 27017),
-            // 'dsn'      => env('DB_MONGODB_DSN', 'mongodb+srv://truonghocdot:5zEcaJNdb4Nkenh@atlascluster.iwgiywq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClusters'),
+            'dsn'      => env('DB_MONGODB_DSN', 'mongodb+srv://truonghocdot:5zEcaJNdb4Nkenh@atlascluster.iwgiywq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClusters'),
             'database' => env('DB_MONGODB_DATABASE', 'cinema'),
         ],
     ],
