@@ -3,20 +3,18 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Visit;
-use App\Models\User;
 use App\Models\Movies;
 use App\Models\Category;
 use App\Models\Country;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
     public function index(Request $req){
-        $client = User::where('role',0)->count();
         $movies = Movies::all()->count();
-        $access_times = Visit::all()->count();
-        return view('admin.index');
+        
+        return view('admin.index',compact('movies'));
     }
 
     public function categories(){
@@ -54,6 +52,32 @@ class DashboardController extends Controller
 
     public function countries_delete(Request $req){
         $country = Country::where('slug',$req->slug)->delete();
+        return redirect()->back();
+    }
+
+    public function account_admin(){
+        $user = User::all();
+        return view('admin.account',compact('user'));
+    }
+
+    public function account_delete(Request $req){
+        $user = User::find($req['id'])->delete();
+        return redirect()->back();
+    }
+
+    public function account_role(Request $req){
+        $user = User::find($req['id']);
+        $user->update([
+            'role' => $req['role']
+        ]);
+        return redirect()->back();
+    }
+
+    public function account_status(Request $req){
+        $user = User::find($req['id']);
+        $user->update([
+            'status' => $req['status']
+        ]);
         return redirect()->back();
     }
 }

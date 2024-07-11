@@ -49,6 +49,12 @@ Route::prefix('admin')->group(function(){
         Route::get('/moives/new', [MovieController::class, 'movies_list_new'])->name('admin.movies.new');
         Route::patch('/movies/add-new/',[MovieController::class,'add_new_film'])->name('admin.movie.add');
         Route::get("/movie/{slug}", [MovieController::class, 'detail_movie'])->name("admin.movie");
+
+        Route::get('/account',[DashboardController::class,'account_admin'])->name('admin.account');
+        Route::delete('/account/delete',[DashboardController::class,'account_delete'])->name('admin.account.delete');
+        Route::patch('/account/role',[DashboardController::class,'account_role'])->name('admin.account.role');
+        Route::patch('/account/status',[DashboardController::class,'account_status'])->name('admin.account.status');
+
     });
 
     Route::get("/login", [LogonController::class, 'login_show_form'])->name("admin.login");

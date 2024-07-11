@@ -1,0 +1,18 @@
+<script>
+    var btn_role = document.querySelectorAll('#btn-role');
+    var btn_status = document.querySelectorAll('#btn-status');
+    btn_role.forEach((item) => {
+        item.addEventListener('change',(e) => {
+            e.preventDefault();
+            var formRole = item.parentElement ;
+            formRole.submit();
+        })
+    })
+    btn_status.forEach((item) => {
+        item.addEventListener('change',(e) => {
+            e.preventDefault();
+            var formRole = item.parentElement ;
+            formRole.submit();
+        })
+    })
+</script>
