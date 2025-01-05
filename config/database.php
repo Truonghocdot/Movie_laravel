@@ -110,7 +110,7 @@ return [
         ],
         'mongodb' => [
             'driver'   => 'mongodb',
-            'dsn'      => env('DB_MONGODB_DSN', 'mongodb+srv://truonghocdot:5zEcaJNdb4Nkenh@atlascluster.iwgiywq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClusters'),
+            'dsn'      => env('DB_MONGODB_DSN', 'mongodb+srv://truonghocdot:eR3Xamvni4LygGYQ@atlascluster.iwgiywq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasClusters'),
             'database' => env('DB_MONGODB_DATABASE', 'cinema'),
         ],
     ],

@@ -9,7 +9,8 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    protected $connection = 'mysql' ;
+    protected $connection = 'mongodb';
+    // protected $connection = 'mysql' ;
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {

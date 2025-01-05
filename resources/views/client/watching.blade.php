@@ -177,7 +177,7 @@
             <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
                 <section id="content" class="test">
                     <div class="clearfix wrap-content">
-                        @if (count($film->episodes) > 1 || $item->type_release == 'series')
+                        @if (count($film->episodes) > 1 )
                             <iframe width="100%" height="500" src="{{ $film['episodes'][$page]['link_embed'] }}"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -239,7 +239,7 @@
                                 <div role="tabpanel" class="tab-pane active server-1" id="server-0">
                                     <div class="halim-server">
                                         <ul class="halim-list-eps">
-                                            @if (count($film->episodes) > 1 || $item->type_release == 'series')
+                                            @if (count($film->episodes) > 1)
                                                 @foreach ($film->episodes as $item)
                                                     <li class="halim-episode">
                                                         <a href="{{ route('watching', ['slug' => $film->slug]) }}?tap={{ $item['name'] }}"
