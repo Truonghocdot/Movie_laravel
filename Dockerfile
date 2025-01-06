@@ -12,7 +12,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql gd mbstring zip exif pcntl bcmath opcache
 
 # Cài đặt MongoDB extension
-RUN pecl install mongodb && docker-php-ext-enable mongodb
+# RUN pecl install mongodb && docker-php-ext-enable mongodb
 
 # Copy source code Laravel
 WORKDIR /var/www
